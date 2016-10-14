@@ -1,9 +1,12 @@
 package com.cisc181.core;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import base.TriangleException;
  
 /*
  * comment
@@ -89,7 +92,7 @@ public abstract class Person implements java.io.Serializable {
 	 */
 
 	public Person(String FirstName, String MiddleName, String LastName,
-			Date DOB, String Address, String Phone_number, String Email)
+			Date DOB, String Address, String Phone_number, String Email) throws PersonException
 	{
 		this.FirstName = FirstName;
 		this.MiddleName = MiddleName;
@@ -98,6 +101,15 @@ public abstract class Person implements java.io.Serializable {
 		this.address = Address;
 		this.setPhone(Phone_number);
 		this.email_address = Email;
+		
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.YEAR, -100);
+		long diff = getDOB() - calendar;
+		if () {
+			
+		} else {
+			throw new PersonException(this);
+		}
 		
 	}
 
@@ -141,4 +153,5 @@ public abstract class Person implements java.io.Serializable {
 		return age;
 
 	}
+
 }

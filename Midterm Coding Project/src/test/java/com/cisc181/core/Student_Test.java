@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class Student_Test {
-
+  
 	@BeforeClass
 	public static void setup() {
 	}
