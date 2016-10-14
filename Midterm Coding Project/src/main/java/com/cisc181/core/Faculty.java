@@ -6,7 +6,7 @@ public class Faculty extends Employee {
 
 	private String officeHours;
 	private int rank;
-
+ 
     public void setofficeHours(String officeHours){
         this.officeHours = officeHours;
     }

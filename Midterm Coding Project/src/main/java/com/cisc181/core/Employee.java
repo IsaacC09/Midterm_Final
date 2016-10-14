@@ -6,7 +6,7 @@ public class Employee extends Person implements java.io.Serializable{
     private String office;
     private double salary;
     private Date hire;
-
+ 
     /**
      * Employee no-arg constructor
      * @since - 07/13/2014
