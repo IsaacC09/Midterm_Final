@@ -7,7 +7,7 @@ import com.cisc181.eNums.eTitle;
 public class Staff extends Employee {
 
 	 private eTitle Title;
-
+ 
 	   public Staff(eTitle title){
 	        this.Title = title;
 	    }
