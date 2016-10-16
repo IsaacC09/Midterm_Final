@@ -112,8 +112,9 @@ public abstract class Person implements java.io.Serializable {
 			throw new PersonException(this);
 		}
 		
-		// Exception thrown if phone number is not inn  format (###)-### -####
-		String regex = "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$";
+		// Exception thrown if phone number is not in format (###)-### -####
+		String regex = 
+				"^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$";
 		
 		Pattern pattern = Pattern.compile(regex);
 		 Matcher matcher = pattern.matcher(Phone_number);
