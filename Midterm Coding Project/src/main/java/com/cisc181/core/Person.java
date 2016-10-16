@@ -1,13 +1,13 @@
 package com.cisc181.core;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import base.TriangleException;
- 
 /*
  * comment
  */
@@ -49,10 +49,9 @@ public abstract class Person implements java.io.Serializable {
 		return DOB;
 	}
 
-	public void setDOB(Date DOB){
+	public void setDOB(Date DOB) {
 		this.DOB = DOB;
-		
-		
+
 	}
 
 	public void setAddress(String newAddress) {
@@ -65,7 +64,7 @@ public abstract class Person implements java.io.Serializable {
 
 	public void setPhone(String newPhone_number) {
 		phone_number = newPhone_number;
-	
+
 	}
 
 	public String getPhone() {
@@ -91,9 +90,8 @@ public abstract class Person implements java.io.Serializable {
 	 * Constructors Constructor with arguments
 	 */
 
-	public Person(String FirstName, String MiddleName, String LastName,
-			Date DOB, String Address, String Phone_number, String Email) throws PersonException
-	{
+	public Person(String FirstName, String MiddleName, String LastName, Date DOB, String Address, String Phone_number,
+			String Email) throws PersonException {
 		this.FirstName = FirstName;
 		this.MiddleName = MiddleName;
 		this.LastName = LastName;
@@ -101,12 +99,27 @@ public abstract class Person implements java.io.Serializable {
 		this.address = Address;
 		this.setPhone(Phone_number);
 		this.email_address = Email;
+
+		// Exception thrown if DOB is 100 years before current date
+		Calendar century = Calendar.getInstance();
+		century.add(Calendar.YEAR, -100);
+		Calendar BirthDay = Calendar.getInstance();
+		BirthDay.setTime(this.DOB);
 		
-		Calendar calendar = Calendar.getInstance();
-		calendar.add(Calendar.YEAR, -100);
-		long diff = getDOB() - calendar;
-		if () {
-			
+		if (BirthDay.after(century)) {
+
+		} else {
+			throw new PersonException(this);
+		}
+		
+		// Exception thrown if phone number is not inn  format (###)-### -####
+		String regex = "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$";
+		
+		Pattern pattern = Pattern.compile(regex);
+		 Matcher matcher = pattern.matcher(Phone_number);
+
+		if (matcher.matches()) {
+
 		} else {
 			throw new PersonException(this);
 		}
@@ -114,8 +127,7 @@ public abstract class Person implements java.io.Serializable {
 	}
 
 	public void PrintName() {
-		System.out.println(this.FirstName + ' ' + this.MiddleName + ' '
-				+ this.LastName);
+		System.out.println(this.FirstName + ' ' + this.MiddleName + ' ' + this.LastName);
 	}
 
 	public void PrintDOB() {
@@ -135,16 +147,14 @@ public abstract class Person implements java.io.Serializable {
 
 		// If birth date is greater than todays date (after 2 days adjustment of
 		// leap year) then decrement age one year
-		if ((birthDate.get(Calendar.DAY_OF_YEAR)
-				- today.get(Calendar.DAY_OF_YEAR) > 3)
+		if ((birthDate.get(Calendar.DAY_OF_YEAR) - today.get(Calendar.DAY_OF_YEAR) > 3)
 				|| (birthDate.get(Calendar.MONTH) > today.get(Calendar.MONTH))) {
 			age--;
 
 			// If birth date and todays date are of same month and birth day of
 			// month is greater than todays day of month then decrement age
 		} else if ((birthDate.get(Calendar.MONTH) == today.get(Calendar.MONTH))
-				&& (birthDate.get(Calendar.DAY_OF_MONTH) > today
-						.get(Calendar.DAY_OF_MONTH))) {
+				&& (birthDate.get(Calendar.DAY_OF_MONTH) > today.get(Calendar.DAY_OF_MONTH))) {
 			age--;
 		}
 
