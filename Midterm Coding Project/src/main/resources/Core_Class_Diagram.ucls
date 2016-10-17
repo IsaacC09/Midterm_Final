@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="com.cisc181.core.Employee" project="Midterm Coding Project" 
     file="/Midterm Coding Project/src/main/java/com/cisc181/core/Employee.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="261" width="379" x="284" y="815"/>    
+    <position height="-1" width="-1" x="309" y="768"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="com.cisc181.core.Staff" project="Midterm Coding Project" 
     file="/Midterm Coding Project/src/main/java/com/cisc181/core/Staff.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="399" x="195" y="1116"/>    
+    <position height="-1" width="-1" x="351" y="1067"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="com.cisc181.core.Faculty" project="Midterm Coding Project" 
     file="/Midterm Coding Project/src/main/java/com/cisc181/core/Faculty.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="189" width="382" x="634" y="1116"/>    
+    <position height="-1" width="-1" x="814" y="1025"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="com.cisc181.core.Enrollment" project="Midterm Coding Project" 
     file="/Midterm Coding Project/src/main/java/com/cisc181/core/Enrollment.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="315" width="153" x="394" y="-111"/>    
+    <position height="-1" width="-1" x="280" y="380"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -67,7 +67,7 @@
   </class>  
   <class id="8" language="java" name="com.cisc181.core.Semester" project="Midterm Coding Project" 
     file="/Midterm Coding Project/src/main/java/com/cisc181/core/Semester.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="153" x="819" y="-111"/>    
+    <position height="-1" width="-1" x="84" y="359"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -76,7 +76,7 @@
   </class>  
   <class id="9" language="java" name="com.cisc181.core.Student" project="Midterm Coding Project" 
     file="/Midterm Coding Project/src/main/java/com/cisc181/core/Student.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="207" width="313" x="703" y="815"/>    
+    <position height="-1" width="-1" x="881" y="768"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -85,7 +85,7 @@
   </class>  
   <class id="10" language="java" name="com.cisc181.core.Person" project="Midterm Coding Project" 
     file="/Midterm Coding Project/src/main/java/com/cisc181/core/Person.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="531" width="276" x="587" y="244"/>    
+    <position height="-1" width="-1" x="773" y="314"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,28 +93,32 @@
     </display>  
   </class>  
   <generalization id="11">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <generalization id="12">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="13">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="10"/>  
   </generalization>  
-  <association id="14">    
+  <association id="12">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="15" name="p"/>      
-      <multiplicity id="16" minimum="0" maximum="1"/>    
+      <attribute id="13" name="p">        
+        <position height="0" width="0" x="48" y="-195"/>      
+      </attribute>      
+      <multiplicity id="14" minimum="0" maximum="1">        
+        <position height="0" width="0" x="48" y="-195"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="17">    
+  <generalization id="15">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="16">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
