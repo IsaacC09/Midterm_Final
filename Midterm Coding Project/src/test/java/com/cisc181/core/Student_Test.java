@@ -13,7 +13,7 @@ import org.junit.Test;
 import com.cisc181.eNums.eMajor;
 
 public class Student_Test {
-
+ 
 	@Test
 	public void gradetest() throws PersonException {
 		ArrayList<Course> courses = new ArrayList<Course>();

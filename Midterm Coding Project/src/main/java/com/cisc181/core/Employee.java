@@ -1,5 +1,5 @@
 package com.cisc181.core;
-
+ 
 import java.util.Date;
 
 public class Employee extends Person implements java.io.Serializable {

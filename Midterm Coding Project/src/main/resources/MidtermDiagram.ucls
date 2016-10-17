@@ -67,7 +67,7 @@
   </class>  
   <class id="8" language="java" name="com.cisc181.core.Semester" project="Midterm Coding Project" 
     file="/Midterm Coding Project/src/main/java/com/cisc181/core/Semester.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="100" y="157"/>    
+    <position height="-1" width="-1" x="99" y="151"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,32 +93,32 @@
     </display>  
   </class>  
   <generalization id="11">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <generalization id="12">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </generalization>  
-  <generalization id="13">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <association id="14">    
+  <association id="12">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="15" name="p">        
+      <attribute id="13" name="p">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="16" minimum="0" maximum="1">        
+      <multiplicity id="14" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="17">    
+  <generalization id="15">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="16">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="10"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
