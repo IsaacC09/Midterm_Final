@@ -9,7 +9,7 @@ public class Course {
 	private String CourseName;
 	private int GradePoints;
 	private eMajor Major;
-	 
+
 	public Course(UUID courseID, String courseName, int gradePoints, eMajor major) {
 		super();
 		CourseID = courseID;
@@ -49,6 +49,5 @@ public class Course {
 	public void setMajor(eMajor major) {
 		Major = major;
 	}
-	
-	
+
 }

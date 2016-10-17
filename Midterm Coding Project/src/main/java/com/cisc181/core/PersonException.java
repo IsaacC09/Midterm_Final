@@ -1,6 +1,6 @@
 package com.cisc181.core;
 
-public class PersonException extends Exception{
+public class PersonException extends Exception {
 
 	private Person p;
 
@@ -8,10 +8,9 @@ public class PersonException extends Exception{
 		super();
 		this.p = p;
 	}
- 
+
 	public Person getP() {
 		return p;
 	}
-	
-	
+
 }

@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/** 
+/**
  * @author Dad
  *
  */
@@ -23,7 +23,7 @@ public class Employee_Test {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
- 
+
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -47,7 +47,7 @@ public class Employee_Test {
 
 	@Test
 	public void test() {
-		assertEquals(1,1);
+		assertEquals(1, 1);
 	}
 
 }

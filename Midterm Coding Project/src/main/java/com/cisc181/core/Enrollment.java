@@ -8,7 +8,7 @@ public class Enrollment {
 	private UUID StudentID;
 	private UUID EnrollmentID;
 	private double Grade;
-	 
+
 	private Enrollment() {
 		super();
 	}
@@ -51,8 +51,5 @@ public class Enrollment {
 	public void setGrade(double grade) {
 		Grade = grade;
 	}
-	
-	
-	
-	
+
 }

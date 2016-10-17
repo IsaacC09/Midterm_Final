@@ -33,7 +33,7 @@ public class Student_Test {
 				java.sql.Date.valueOf("2017-5-10"));
 		semester.add(fall);
 		semester.add(spring);
- 
+
 		ArrayList<Section> sections = new ArrayList<Section>();
 		// Section(UUID courseID, UUID semesterID, UUID sectionID, int roomID)
 		Section bioFall = new Section(bio.getCourseID(), fall.getSemesterID(), UUID.randomUUID(), 101);
@@ -383,7 +383,6 @@ public class Student_Test {
 		double stud0_avg = (stud0_bioFall.getGrade() + stud0_chemFall.getGrade() + stud0_econFall.getGrade()
 				+ stud0_bioSpring.getGrade() + stud0_chemSpring.getGrade() + stud0_econSpring.getGrade()) / 6;
 		assertEquals(stud0_avg, 2, 0);
-
 	}
 
 	@Test
