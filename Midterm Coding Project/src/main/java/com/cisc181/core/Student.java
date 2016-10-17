@@ -9,7 +9,7 @@ public class Student extends Person {
  
 	private eMajor Major;
 	private UUID StudentID;
-	
+	 
 	public eMajor getMajor ( )
     {
         return this.Major;

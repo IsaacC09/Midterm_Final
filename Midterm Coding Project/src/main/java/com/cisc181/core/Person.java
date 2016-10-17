@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  * comment
  */
 public abstract class Person implements java.io.Serializable {
-
+ 
 	private Date DOB;
 	private String FirstName;
 	private String MiddleName;
@@ -62,8 +62,17 @@ public abstract class Person implements java.io.Serializable {
 		return address;
 	}
 
-	public void setPhone(String newPhone_number) {
+	public void setPhone(String newPhone_number)throws PersonException {
 		phone_number = newPhone_number;
+		String regex = "^\\(([0-9]{3})\\)[-]([0-9]{3})[-]([0-9]{4})$";
+		 Pattern pattern = Pattern.compile(regex);
+		 Matcher matcher = pattern.matcher(newPhone_number);
+		 if (matcher.matches()) {
+		 phone_number = newPhone_number;
+		 }
+		 else {
+		 throw new PersonException(this);
+		 }
 
 	}
 
@@ -107,19 +116,6 @@ public abstract class Person implements java.io.Serializable {
 		BirthDay.setTime(this.DOB);
 		
 		if (BirthDay.after(century)) {
-
-		} else {
-			throw new PersonException(this);
-		}
-		
-		// Exception thrown if phone number is not in format (###)-### -####
-		String regex = 
-				"^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$";
-		
-		Pattern pattern = Pattern.compile(regex);
-		 Matcher matcher = pattern.matcher(Phone_number);
-
-		if (matcher.matches()) {
 
 		} else {
 			throw new PersonException(this);

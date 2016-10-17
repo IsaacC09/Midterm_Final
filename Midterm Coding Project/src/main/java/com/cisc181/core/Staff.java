@@ -11,7 +11,7 @@ public class Staff extends Employee {
 	   public Staff(eTitle title){
 	        this.Title = title;
 	    }
-
+ 
 	    public void setTitle(eTitle title){
 	        this.Title = title;
 	    }

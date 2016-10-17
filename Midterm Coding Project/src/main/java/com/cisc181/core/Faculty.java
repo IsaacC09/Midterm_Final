@@ -10,7 +10,7 @@ public class Faculty extends Employee {
     public void setofficeHours(String officeHours){
         this.officeHours = officeHours;
     }
-
+ 
     public String getofficeHours(){
         return this.officeHours;
     }

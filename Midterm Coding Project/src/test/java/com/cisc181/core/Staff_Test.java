@@ -36,7 +36,7 @@ public class Staff_Test {
 		staffers.add(D);
 		staffers.add(E);
 	}
-
+ 
 	@Test
 	public void testAvgSaleery() throws PersonException {
 		Date today = new Date();

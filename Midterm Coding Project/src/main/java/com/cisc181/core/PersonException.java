@@ -8,7 +8,7 @@ public class PersonException extends Exception{
 		super();
 		this.p = p;
 	}
-
+ 
 	public Person getP() {
 		return p;
 	}

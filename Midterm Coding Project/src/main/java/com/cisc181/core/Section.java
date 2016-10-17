@@ -8,7 +8,7 @@ public class Section {
 	private UUID SemesterID;
 	private UUID SectionID;
 	private int RoomID;
-	
+	 
 	public Section(UUID courseID, UUID semesterID, UUID sectionID, int roomID) {
 		super();
 		CourseID = courseID;
